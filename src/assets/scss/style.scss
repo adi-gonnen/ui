@@ -1,0 +1,25 @@
+@import 'helpers';
+@import 'box';
+@import 'notification';
+@import 'vars';
+
+* {
+    box-sizing:border-box;
+  }
+
+  p, h1,h2, h3, h4, h5, h6, ul, li, body{
+    margin: 0;
+    padding: 0;
+  }
+
+  .home {
+    position: fixed;
+    left: 300px;
+    right: 50px;
+    font-family: Roboto;
+    // justify-content: space-between;
+  }
+  body {
+    background-color: #d5dae654
+  }
+

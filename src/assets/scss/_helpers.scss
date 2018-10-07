@@ -1,0 +1,22 @@
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.sb {       //space between
+    justify-content: space-between;
+}
+.ptr {      //pointer
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.mlr5 {  //margin left-right 5px
+    margin: 0 5px;
+}
