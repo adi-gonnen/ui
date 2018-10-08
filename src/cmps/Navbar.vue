@@ -37,7 +37,7 @@ export default {
 @import "../assets/scss/style.scss";
 
 .nav-container {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 100px;
     text-transform: capitalize;
@@ -68,6 +68,10 @@ export default {
         padding-left: 40px;
         border-left: 10px solid $main-color;
         list-style-type: none;
+    }
+    &:hover {
+        // opacity: 0.7;
+        font-size: 1.5em;
     }
 }
 
