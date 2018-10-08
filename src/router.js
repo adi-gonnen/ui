@@ -11,5 +11,30 @@ export default new Router({
       name: 'home',
       component: Home
     },
+    {
+      path: '/workflow',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/statistics',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/calendar',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/users',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/settings',
+      name: 'home',
+      component: Home
+    },
   ]
 })

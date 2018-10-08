@@ -60,13 +60,8 @@ export default {
   margin-left: 40px;
 }
 
-.lower-boxs {
-  // width: 33.3%;
-  // margin: 20px 20px 30px 0;
-}
 .upper-boxs {
   margin-right: 20px;
-  // min-width: 600px;
 }
 .upper-boxs:first-child {
   width: 40%;

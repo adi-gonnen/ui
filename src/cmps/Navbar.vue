@@ -1,34 +1,29 @@
 <template>
-    <div class="nav-container flex column">
-        
-        <div class="nav-body flex-column">
-            <div class="nav-link flex">
-                 <!-- <router-link to="/" class="flex"> -->
-                    <font-awesome-icon icon="home" class="icon"/>
-                    <p>home</p>
-                 <!-- </router-link> -->
-            </div>
-             <div class="nav-link flex">
-                <font-awesome-icon icon="equals" class="icon"/>
-                <p>workflow</p>
-            </div>
-             <div class="nav-link flex">
-                <font-awesome-icon icon="signature" class="icon"/>
-                <p>statistics</p>
-            </div>
-             <div class="nav-link flex">
-                <font-awesome-icon icon="calendar-alt" class="icon"/>
-                <p>calendar</p>
-            </div>
-             <div class="nav-link flex">
-                <font-awesome-icon icon="user" class="icon"/>
-                <p>users</p>
-            </div>
-             <div class="nav-link flex">
-                <font-awesome-icon icon="cog" class="icon"/>
-                <p>settings</p>
-            </div>
-        </div>
+    <div class="nav-container flex column ptr">
+        <router-link to="/" class="nav-router-link flex">
+            <font-awesome-icon icon="home" class="icon"/>
+            <p>home</p>
+        </router-link>
+        <router-link to="/workflow" class="nav-router-link flex">
+            <font-awesome-icon icon="equals" class="icon"/>
+            <p>workflow</p>
+        </router-link>
+        <router-link to="/statistics" class="nav-router-link flex">
+            <font-awesome-icon icon="signature" class="icon"/>
+            <p>statistics</p>
+        </router-link>
+        <router-link to="/calendar" class="nav-router-link flex">
+            <font-awesome-icon icon="calendar-alt" class="icon"/>
+            <p>calendar</p>
+        </router-link>
+        <router-link to="/users" class="nav-router-link flex">
+            <font-awesome-icon icon="user" class="icon"/>
+            <p>users</p>
+        </router-link>
+        <router-link to="/settings" class="nav-router-link flex">
+            <font-awesome-icon icon="cog" class="icon"/>
+            <p>settings</p>
+        </router-link>
     </div>
 </template>
 
@@ -60,22 +55,19 @@ export default {
     color: $main-color;
     margin-right: 15px;
 }
-.nav-link {
-    cursor: pointer;
+.nav-router-link {
+    color: white;
     align-items: center;
     height: 100px;
-    margin-left: 50px;
-    a {
-        &.router-link-exact-active {
-        background-color: #122143;
-        color: white;
-        text-decoration: none;
-        }
-    }
-    &:first-child {         //router-active didn't work well, I put this instead
+    padding-left: 50px;
+    text-decoration: none;
+
+    &.router-link-exact-active {
         background-color: #122143;
         margin-left: 0;
-        padding-left: 50px;
+        padding-left: 40px;
+        border-left: 10px solid $main-color;
+        list-style-type: none;
     }
 }
 
