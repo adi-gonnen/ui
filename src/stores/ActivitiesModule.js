@@ -1,4 +1,4 @@
-import ActivityService from '../services/ActivityService.js'
+import UserService from '../services/UserService.js'
 
 
 export default {

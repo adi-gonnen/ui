@@ -1,7 +1,16 @@
 <template>
   <div class="sales">
-    <!-- <h1>your sales</h1> -->
-    <img src="img/sales.png"/>
+    <div class="box-title flex">
+      <h1>your sales</h1>
+      <div class="select-list flex">
+        <p>period:</p>
+        <select class="select bold">
+          <option>last year</option>
+        </select>
+      </div>
+    </div>
+    <img src="img/sales2.png"/>
+    <!-- <div class="sale-img" :style="{backgroundImage: url, backgroundSize: 'cover', backgroundPosition: 'center', backgroundrepeat: 'no-repeat'}"/> -->
   </div>
 </template>
 
@@ -9,6 +18,11 @@
 
 export default {
   name: 'sales',
+  data() {
+    return {
+      url: `url("img/sales.png")`
+    }
+  }
   
 }
 </script>
@@ -18,9 +32,11 @@ export default {
 
 .sales {
   border: 1px solid $border-color;
+  width: 100%;
   // margin: 20px;
   img {
     width: 100%;
+    min-width: 400px;
   }
 }
 </style>

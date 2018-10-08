@@ -1,7 +1,15 @@
 <template>
   <div class="report">
-    <!-- <h1>report</h1> -->
-    <img src="img/report.png"/>
+    <div class="box-title flex">
+      <h1>report</h1>
+      <div class="select-list flex">
+        <p>period:</p>
+        <select class="select bold">
+          <option>last year</option>
+        </select>
+      </div>
+    </div>
+    <img src="img/report2.png"/>
   </div>
 </template>
 
@@ -18,9 +26,11 @@ export default {
 
 .report {
   border: 1px solid $border-color;
+  width: 100%;
   // margin: 20px;
   img {
     width: 100%;
+    // min-width: 600px;
   }
 }
 </style>

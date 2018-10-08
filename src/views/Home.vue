@@ -59,18 +59,19 @@ export default {
   width: 100%;
   margin-left: 40px;
 }
+
 .lower-boxs {
   width: 33.3%;
-  margin-top: 20px;
-  margin-right: 20px;
+  margin: 20px 20px 30px 0;
 }
 .upper-boxs {
   margin-right: 20px;
+  // min-width: 600px;
 }
-.upper-section:first-child {
+.upper-boxs:first-child {
   width: 40%;
 }
-.upper-section:last-child {
+.upper-boxs:last-child {
   width: 60%;
 }
 </style>

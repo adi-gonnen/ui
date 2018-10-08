@@ -9,8 +9,8 @@
       </div>
     </div>
     <div class="preview-container">
-      <ul v-for="activity in activities.slice(0,4)" :key="activity._id">
-        <activity-preview :activity="activity" class="preview-activity ptr"/>
+      <ul v-for="(activity, index) in activities.slice(0,4)" :key="index">
+        <activity-preview :activity="activity" :idx="index" class="preview-activity ptr"/>
       </ul>
     </div>
   </div>
@@ -36,7 +36,7 @@ export default {
   methods: {
     setActivities() {
       this.activities = UserService.getActivities();
-    }
+    },
   }
 }
 </script>
@@ -44,6 +44,9 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/style.scss";
 
+.activity {
+  width: 100%;
+}
 .preview-activity {
   height: 125px;
   border-bottom: none;

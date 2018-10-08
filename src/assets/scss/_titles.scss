@@ -1,0 +1,20 @@
+.select {
+    border: none;
+    text-transform: capitalize;
+    font-family: Roboto;
+    cursor: pointer;
+}
+
+.select-list {
+    border: 1px solid rgba(132, 146, 175, 0.3);
+    border-radius: 30px;
+    align-items: center;
+    padding: 13px;
+}
+
+.box-title {
+    justify-content: space-between;
+    margin: 20px;
+    text-transform: capitalize;
+    color: #8492af;
+}

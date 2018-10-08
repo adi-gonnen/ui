@@ -2,6 +2,7 @@
 @import 'box';
 @import 'notification';
 @import 'vars';
+@import 'titles';
 
 * {
     box-sizing:border-box;
@@ -13,11 +14,9 @@
   }
 
   .home {
-    position: fixed;
-    left: 300px;
-    right: 50px;
+    // margin-left: 300px;
+    margin: 0 300px;
     font-family: Roboto;
-    // justify-content: space-between;
   }
   body {
     background-color: #d5dae654
