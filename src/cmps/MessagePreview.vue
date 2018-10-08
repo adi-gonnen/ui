@@ -29,12 +29,6 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/style.scss";
 
-.img-activity {
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    margin: 5px;
-}
 .message-body {
     p {
         color: #0e1a35;
@@ -66,9 +60,13 @@ export default {
 }
 .title {
     font-size: 14px;
+    margin-bottom: 5px;
 }
 .reply, .cog {
     margin-right: 10px;
     color: #8492af;
+}
+.message-title {
+    margin-bottom: 5px;
 }
 </style>

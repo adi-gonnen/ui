@@ -19,7 +19,6 @@
 
 <script>
 import TaskPreview from '@/cmps/TaskPreview.vue'
-import UserService from "../services/UserService.js";
 
 export default {
   name: 'tasks',
@@ -28,21 +27,24 @@ export default {
   },
   data() {
     return {
-      tasks: [],
       delayed: null,
     }
   },
   created() {
-    this.setTasks();
+    this.getTasksList();
     this.countDelay();
-    // console.log('tasks: ', this.tasks);
-    // console.log('delay: ', this.delayed);
+  },
+  computed: {
+    tasks() {
+      return this.$store.getters.getTasks
+    }
   },
   methods: {
-    setTasks() {
-      // UserService.getTasks().then (tasks => this.tasks=tasks)
-      // console.log(UserService.getTasks());      
-      this.tasks = UserService.getTasks()
+    getTasksList() {
+      this.$store.dispatch({type: 'loadTasks'})
+      .then((tasks)=> {
+          // console.log('tasks##', tasks)
+      })
     },
     countDelay() {
       var count = 0;

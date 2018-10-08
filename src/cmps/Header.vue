@@ -39,7 +39,7 @@ export default {
   },
   methods: {
       openNavbar() {
-          document.querySelector('.navbar').classList.toggle('open');
+          document.querySelector('.navbar').classList.toggle('close');
         //   document.querySelector('.nav-hamburger').classList.toggle('move-btn');
         //   document.querySelector('.search').classList.toggle('move-srch');
       }
@@ -67,6 +67,9 @@ export default {
   width: 178px;
   font-size: 1.25em;
   margin-right: 30px;
+  &:hover {
+      opacity: 0.7;
+  }
 }
 
 .header-right {
@@ -104,11 +107,11 @@ export default {
 .envelope, .bell {
     margin-right: 30px;
 }
-.navbar {
+// .navbar {
+//     display: none;
+// }
+.close {
     display: none;
-}
-.open {
-    display: block;
 }
 
 .bell-container {

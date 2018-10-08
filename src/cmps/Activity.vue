@@ -18,24 +18,26 @@
 
 <script>
 import ActivityPreview from '@/cmps/ActivityPreview.vue'
-import UserService from "../services/UserService.js";
 
 export default {
   name: 'activity',
   components: {
     ActivityPreview
   },
-  data() {
-    return {
-      activities: []
+  created() {
+    this.getActivitiesList()
+  },
+  computed: {
+    activities() {
+      return this.$store.getters.getActivities;
     }
   },
-  created() {
-    this.setActivities()
-  },
   methods: {
-    setActivities() {
-      this.activities = UserService.getActivities();
+    getActivitiesList() {
+      this.$store.dispatch({type: 'loadActivities'})
+      .then((activities)=> {
+          // console.log('activities##', activities)
+      })
     },
   }
 }

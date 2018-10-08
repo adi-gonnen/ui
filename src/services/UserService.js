@@ -138,6 +138,7 @@ const tasks = [
 
 function getTasks() {
     return tasks;
+    // return Promise.resolve({tasks});
 }
 
 function getMessages() {

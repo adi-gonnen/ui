@@ -1,5 +1,5 @@
 <template>
-    <div class="activity-container flex">
+    <div class="activity-box flex">
         <div class="img-activity flex">
             <div class="img-container">
                 <img :src="activity.img">
@@ -33,10 +33,28 @@ export default {
 .message-title {
     font-size: 14px;
 }
+.message-tools {
+    align-items: center;
+    margin-top: 5px;
+}
 .h-line {
     border-left: 1px solid rgba(132, 146, 175, 0.3);
     height: 70px;
     z-index: -1;
     margin-left: 25px;
+}
+.activity-box {
+    padding: 10px;
+    align-items: center;
+}
+.img-container {
+    z-index: 2;
+    align-content: center;
+}
+
+@media (max-width: 900px ){
+    .message-title {
+        flex-direction: column;
+    }
 }
 </style>

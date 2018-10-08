@@ -6,6 +6,8 @@
         <p>period:</p>
         <select class="select bold">
           <option>last year</option>
+          <option>last month</option>
+          <option>last week</option>
         </select>
       </div>
     </div>
@@ -27,6 +29,7 @@ export default {
 .report {
   border: 1px solid $border-color;
   width: 100%;
+  background-color: white;
   // margin: 20px;
   img {
     width: 100%;

@@ -61,8 +61,8 @@ export default {
 }
 
 .lower-boxs {
-  width: 33.3%;
-  margin: 20px 20px 30px 0;
+  // width: 33.3%;
+  // margin: 20px 20px 30px 0;
 }
 .upper-boxs {
   margin-right: 20px;

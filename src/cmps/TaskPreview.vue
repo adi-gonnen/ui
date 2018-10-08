@@ -40,6 +40,7 @@ export default {
         font-weight: 500;
         line-height: 21.07px;
         letter-spacing: 0.28px;
+        margin-bottom: 5px;
     }
     p:last-child {
         font-size: 14px;

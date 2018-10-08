@@ -16,7 +16,6 @@
 
 <script>
 import MessagePreview from '@/cmps/MessagePreview.vue'
-import UserService from "../services/UserService.js";
 
 export default {
   name: 'messages',
@@ -25,17 +24,24 @@ export default {
   },
   data() {
     return {
-      messages: [],
       news: null
     }
   },
   created() {
-    this.setMessages();
+    this.getMessagesList();
     this.setNews();
   },
+  computed: {
+    messages() {
+      return this.$store.getters.getMessages;
+    }
+  },
   methods: {
-    setMessages() {
-      this.messages = UserService.getMessages();
+    getMessagesList() {
+      this.$store.dispatch({type: 'loadMessages'})
+      .then((messages)=> {
+          // console.log('messages##', messages)
+      })
     },
     setNews() {
       var count = 0;
