@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import EmptyPage from './views/EmptyPage.vue'
 
 Vue.use(Router)
 
@@ -14,27 +15,27 @@ export default new Router({
     {
       path: '/workflow',
       name: 'home',
-      component: Home
+      component: EmptyPage
     },
     {
       path: '/statistics',
       name: 'home',
-      component: Home
+      component: EmptyPage
     },
     {
       path: '/calendar',
       name: 'home',
-      component: Home
+      component: EmptyPage
     },
     {
       path: '/users',
       name: 'home',
-      component: Home
+      component: EmptyPage
     },
     {
       path: '/settings',
       name: 'home',
-      component: Home
+      component: EmptyPage
     },
   ]
 })

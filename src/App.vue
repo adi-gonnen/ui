@@ -22,7 +22,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-.body {
+body {
   background-color: #d5dae654
 }
+
+// https://murmuring-sierra-54649.herokuapp.com
 </style>
+
+

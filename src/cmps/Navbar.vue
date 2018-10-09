@@ -74,4 +74,13 @@ export default {
     }
 }
 
+@media (max-width: 540px) {
+    .nav-container {
+        font-size: 18px;
+        line-height: 48px;
+        width: 180px;
+        opacity: 0.8;
+    }
+}
+
 </style>

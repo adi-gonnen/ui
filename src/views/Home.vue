@@ -20,7 +20,6 @@ import Report from "@/cmps/Report.vue";
 import Sales from "@/cmps/Sales.vue";
 import Tasks from "@/cmps/Tasks.vue";
 import Messages from "@/cmps/Messages.vue";
-import UserService from "../services/UserService.js";
 
 export default {
   name: "home",
@@ -71,6 +70,31 @@ export default {
   }
   &:last-child {
     width: 60%;
+  }
+}
+
+@media (max-width: 760px) { 
+  .lower-section, .upper-section {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 20px;
+  }
+  .upper-boxs {
+    &:first-child {
+    width: 100%;
+    margin-bottom: 20px;
+    }
+    &:last-child {
+    width: 100%;
+    }
+  }
+}
+
+@media (max-width: 760px) { 
+  .upper-section,
+  .lower-section {
+    width: 100%;
+    margin-left: 0;
   }
 }
 </style>

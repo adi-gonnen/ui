@@ -34,5 +34,11 @@ export default {
     width: 100%;
   }
 }
+
+@media (max-width: 900px){ 
+  .select-list {
+        width: 60%;
+    }
+}
 </style>
 

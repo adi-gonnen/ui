@@ -55,5 +55,15 @@ export default {
   justify-content: flex-start;
 }
 
+@media (max-width: 760px){
+  .preview-activity {
+    height: 55px;
+    margin: 15px;
+  }
+  .activity {
+    height: 100px;
+  }
+}
+
 </style>
 

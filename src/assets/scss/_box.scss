@@ -45,3 +45,19 @@
     color: inherit;
     margin-right: 5px;
 }
+
+
+@media (max-width: 760px) { 
+    .lower-box {
+        max-width: 100%;
+        margin: 15px 0;
+    }
+    .activity-container {
+        height: 70px;
+        align-content: center;
+    }
+    .preview-activity {
+        padding: 20px 0;
+    }
+}
+

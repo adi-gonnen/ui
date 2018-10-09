@@ -14,15 +14,17 @@
         </div>
         <div class="header-right flex">
             <button class="ptr add-btn">+ Add project</button>
-            <font-awesome-icon icon="envelope" class="fa envelope" />
-            <div class="bell-container flex">
-                <font-awesome-icon icon="bell" class="fa bell" />
-                <p class="bell-count">3</p>
-            </div>
-            <div class="header-img flex">
-                <img v-if="user" :src="user.img"/>
-                <font-awesome-icon icon="caret-down" class="fa down"/>   
-            </div>
+            <div class="header-icons flex">
+                <font-awesome-icon icon="envelope" class="fa envelope" />
+                <div class="bell-container flex">
+                    <font-awesome-icon icon="bell" class="fa bell" />
+                    <p class="bell-count">3</p>
+                </div>
+                <div class="header-img flex">
+                    <img v-if="user" :src="user.img"/>
+                    <font-awesome-icon icon="caret-down" class="fa down"/>   
+                </div>
+                </div>
         </div>
     </section>
 </template>
@@ -67,6 +69,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    background-color: white;
 }
 
 .add-btn {
@@ -90,6 +93,9 @@ export default {
         height: 45px;
         margin-right: 5px;
     }
+}
+.header-icons {
+    align-items: center;
 }
 .left {
     color: #5584ff;
@@ -156,6 +162,22 @@ export default {
 .icon {
     color: $main-color;
     margin: auto 15px;
+}
+
+@media (max-width: 540px) {
+    .header-right {
+        flex-direction: column-reverse;
+    }
+    .header-left {
+        margin-left: 170px;
+        flex-direction: column;
+    }
+    .add-btn {
+        height: 38px;
+        width: 178px;
+        font-size: 1em;
+        margin-right: 30px;
+    }
 }
 </style>
 

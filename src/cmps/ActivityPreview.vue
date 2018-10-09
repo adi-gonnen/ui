@@ -79,4 +79,18 @@ export default {
         margin: 0;
     }
 }
+
+@media (max-width: 760px){
+    .message-title {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .title {
+        margin: 0 5px;
+    }
+    .img-activity {
+        top: 10px;
+    }
+}
 </style>

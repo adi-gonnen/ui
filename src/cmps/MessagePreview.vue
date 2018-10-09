@@ -76,4 +76,11 @@ export default {
         align-items: flex-start;
     }
 }
+
+@media (max-width: 760px){
+    .message-title {
+        flex-direction: row;
+        align-items: center;
+    }
+}
 </style>

@@ -19,3 +19,17 @@
     text-transform: capitalize;
     color: #8492af;
 }
+
+@media (max-width: 900px){ 
+    .box-title {
+      font-size: 0.8em;
+      flex-direction: column;
+    }
+}
+
+@media (max-width: 760px) { 
+    .box-title {
+        font-size: 1em;
+        flex-direction: row;
+    }
+}
