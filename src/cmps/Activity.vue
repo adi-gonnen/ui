@@ -10,7 +10,7 @@
     </div>
     <div class="preview-container">
       <ul v-for="(activity, index) in activities.slice(0,4)" :key="index">
-        <activity-preview :activity="activity" :idx="index" class="preview-activity ptr"/>
+        <activity-preview :activity="activity" :idx="index" class="preview-activity flex ptr"/>
       </ul>
     </div>
   </div>
@@ -25,7 +25,7 @@ export default {
     ActivityPreview
   },
   created() {
-    this.getActivitiesList()
+    this.getActivitiesList();
   },
   computed: {
     activities() {
@@ -52,6 +52,7 @@ export default {
 .preview-activity {
   height: 125px;
   border-bottom: none;
+  justify-content: flex-start;
 }
 
 </style>

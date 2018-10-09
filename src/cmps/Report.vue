@@ -1,7 +1,7 @@
 <template>
   <div class="report">
     <div class="box-title flex">
-      <h1>report</h1>
+      <h2>report</h2>
       <div class="select-list flex">
         <p>period:</p>
         <select class="select bold">
@@ -11,7 +11,7 @@
         </select>
       </div>
     </div>
-    <img src="img/report2.png"/>
+    <img src="img/report.png"/>
   </div>
 </template>
 
@@ -30,10 +30,8 @@ export default {
   border: 1px solid $border-color;
   width: 100%;
   background-color: white;
-  // margin: 20px;
   img {
     width: 100%;
-    // min-width: 600px;
   }
 }
 </style>

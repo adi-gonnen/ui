@@ -1,7 +1,7 @@
 <template>
   <div class="sales">
     <div class="box-title flex">
-      <h1>your sales</h1>
+      <h2>your sales</h2>
       <div class="select-list flex">
         <p>period:</p>
         <select class="select bold">
@@ -11,8 +11,7 @@
         </select>
       </div>
     </div>
-    <img src="img/sales2.png"/>
-    <!-- <div class="sale-img" :style="{backgroundImage: url, backgroundSize: 'cover', backgroundPosition: 'center', backgroundrepeat: 'no-repeat'}"/> -->
+    <img src="img/sales.png"/>
   </div>
 </template>
 
@@ -25,7 +24,6 @@ export default {
       url: `url("img/sales.png")`
     }
   }
-  
 }
 </script>
 

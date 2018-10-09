@@ -1,6 +1,6 @@
 const user = {
     name: 'John',
-    img: 'img/user.png'
+    img: 'img/john.png'
 }
 
 const activities = [
@@ -138,7 +138,6 @@ const tasks = [
 
 function getTasks() {
     return tasks;
-    // return Promise.resolve({tasks});
 }
 
 function getMessages() {
@@ -152,9 +151,6 @@ function getActivities() {
 function getUser() {
     return user;
 }
-// function getTasks() {
-//     return Promise.resolve({tasks: tasks});
-// }
 
 export default {
     getTasks,

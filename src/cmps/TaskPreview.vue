@@ -2,11 +2,9 @@
     <div class="activity-container sb flex">
         <div class="flex">
             <div class="notification flex">
-                <div class="img-container"> 
-                    <p>{{letter}}</p>
-                </div>
+                <div class="letter">{{letter}}</div>
             </div>
-            <div class="activity-body flex column">
+            <div class="activity-body ml10 flex column">
                 <p>{{task.title}}</p>
                 <div :class="task.delay? 'red flex': 'gray flex'">
                     <font-awesome-icon icon="clock" class="clock"/>
@@ -36,7 +34,7 @@ export default {
 .activity-body {
     p:first-child {
         color: #0e1a35;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: 500;
         line-height: 21.07px;
         letter-spacing: 0.28px;
@@ -47,7 +45,12 @@ export default {
         line-height: 16.86px;
     }
 }
-
+.letter {
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 35px;
+    color: white;
+}
 .red {
     color: #f83c7b;
 }
@@ -55,7 +58,7 @@ export default {
     color: #8492af;
 }
 .dots {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #8492af;
 }
 

@@ -1,11 +1,9 @@
 <template>
     <div :class="message.new? 'activity-container flex gray': 'activity-container flex'">
-        <div class="img-activity flex">
-            <div class="img-container">
-                <img :src=message.img>
-            </div>
+        <div class="img-container">
+            <img :src="message.img">
         </div>
-        <div class="activity-body flex column">
+        <div class="activity-body ml10 flex column">
             <div class="message-title flex">
                 <p class="from">{{message.from}}</p>
                 <p class="time">{{message.time}}</p>
@@ -47,19 +45,20 @@ export default {
 .from {
     color: #0e1a35;
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     line-height: 21.07px;
     margin-right: 5px;
 }
 .time {
     color: #8492af;
+    font-size: 13px;
     font-family: "Roboto - Regular";
     font-weight: 400;
     letter-spacing: 0.2px;
 }
 .title {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 5px;
 }
 .reply, .cog {
@@ -68,5 +67,13 @@ export default {
 }
 .message-title {
     margin-bottom: 5px;
+    align-items: center;
+}
+
+@media (max-width: 900px){
+    .message-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 </style>

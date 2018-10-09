@@ -8,8 +8,8 @@
         </div>
         <div class="activity-body flex column">
             <div class="message-title flex">
-                <p class="bold mlr5">{{activity.from}}</p>
-                <p class="mlr5">{{activity.title}}</p>
+                <p class="bold">{{activity.from}}</p>
+                <p class="title mlr5">{{activity.title}}</p>
                 <p class="bold">{{activity.desc}}</p>
             </div>
             <div class="message-tools flex">
@@ -31,30 +31,52 @@ export default {
 @import "../assets/scss/style.scss";
 
 .message-title {
-    font-size: 14px;
+    font-size: 13px;
 }
 .message-tools {
     align-items: center;
     margin-top: 5px;
+    p {
+        font-size: 13px;
+    }
 }
 .h-line {
     border-left: 1px solid rgba(132, 146, 175, 0.3);
-    height: 70px;
-    z-index: -1;
-    margin-left: 25px;
+    height: 80px;
+    z-index: 2;
+    margin-left: 20px;
 }
 .activity-box {
     padding: 10px;
     align-items: center;
+    justify-content: flex-start;
+    position: relative;
 }
+
+.activity-body {
+    margin-left: 47px;
+}
+
+.img-activity {
+    position: absolute;
+    top: 46px;
+}
+
 .img-container {
-    z-index: 2;
+    margin-right: 10px;
+}
+
+.left-section {
     align-content: center;
 }
 
-@media (max-width: 900px ){
+
+@media (max-width: 900px){
     .message-title {
         flex-direction: column;
+    }
+    .title {
+        margin: 0;
     }
 }
 </style>

@@ -6,7 +6,7 @@
       <Report class="upper-boxs"/>
     </div>
     <div class="lower-section flex">
-      <Tasks class="lower-boxs"/>
+      <Tasks class="lower-boxs"/>     
       <Messages class="lower-boxs"/>
       <Activity class="lower-boxs"/>
     </div>
@@ -14,16 +14,16 @@
 </template>
 
 <script>
-import Header from '@/cmps/Header.vue'
-import Activity from '@/cmps/Activity.vue'
-import Report from '@/cmps/Report.vue'
-import Sales from '@/cmps/Sales.vue'
-import Tasks from '@/cmps/Tasks.vue'
-import Messages from '@/cmps/Messages.vue'
+import Header from "@/cmps/Header.vue";
+import Activity from "@/cmps/Activity.vue";
+import Report from "@/cmps/Report.vue";
+import Sales from "@/cmps/Sales.vue";
+import Tasks from "@/cmps/Tasks.vue";
+import Messages from "@/cmps/Messages.vue";
 import UserService from "../services/UserService.js";
 
 export default {
-  name: 'home',
+  name: "home",
   components: {
     Header,
     Activity,
@@ -32,20 +32,23 @@ export default {
     Tasks,
     Messages
   },
-  data() {
-    return {
-      user: null
-    }
-  },
   created() {
     this.setUser();
   },
+  computed: {
+    user() {
+      return this.$store.getters.getUser;
+    }
+  },
   methods: {
     setUser() {
-      this.user = UserService.getUser()
-    },
+      this.$store.dispatch({ type: "loadUser" })
+      .then(user => {
+        // console.log('user##', user)
+      });
+    }
   }
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -53,21 +56,22 @@ export default {
 
 .hello {
   text-align: left;
-  margin: 25px 40px;
+  margin: 25px 20px;
 }
-.upper-section, .lower-section {
+.upper-section,
+.lower-section {
   width: 100%;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .upper-boxs {
   margin-right: 20px;
-}
-.upper-boxs:first-child {
-  width: 40%;
-}
-.upper-boxs:last-child {
-  width: 60%;
+  &:first-child {
+    width: 40%;
+  }
+  &:last-child {
+    width: 60%;
+  }
 }
 </style>
 

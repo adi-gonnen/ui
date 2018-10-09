@@ -44,10 +44,10 @@ export default {
     border: 1px solid black;
     background-color: #0e1a35;
     color: white;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 48px;
-    width: 300px;
+    width: 180px;
     height: 100%;
     transition: all 0.3s ease;
 }
@@ -58,20 +58,19 @@ export default {
 .nav-router-link {
     color: white;
     align-items: center;
-    height: 100px;
-    padding-left: 50px;
+    height: 70px;
+    padding-left: 40px;
     text-decoration: none;
 
     &.router-link-exact-active {
         background-color: #122143;
         margin-left: 0;
-        padding-left: 40px;
+        padding-left: 30px;
         border-left: 10px solid $main-color;
         list-style-type: none;
     }
     &:hover {
-        // opacity: 0.7;
-        font-size: 1.5em;
+        color: dodgerblue;
     }
 }
 

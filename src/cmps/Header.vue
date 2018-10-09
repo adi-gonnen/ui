@@ -1,7 +1,6 @@
 <template>
     <section class="header-container flex">
         <navbar class="navbar"/>
-        <!-- <div class="header-title flex"> -->
         <div class="nav-title flex">
             <font-awesome-icon icon="dot-circle" class="icon"/>
             <p>merkury</p>
@@ -21,11 +20,10 @@
                 <p class="bell-count">3</p>
             </div>
             <div class="header-img flex">
-                <img src="img/john.png"/>
+                <img v-if="user" :src="user.img"/>
                 <font-awesome-icon icon="caret-down" class="fa down"/>   
             </div>
         </div>
-        <!-- </div> -->
     </section>
 </template>
 
@@ -33,17 +31,29 @@
 import Navbar from "@/cmps/Navbar.vue";
 
 export default {
-  name: "header",
-  components: {
-    Navbar
-  },
-  methods: {
-      openNavbar() {
-          document.querySelector('.navbar').classList.toggle('close');
-        //   document.querySelector('.nav-hamburger').classList.toggle('move-btn');
-        //   document.querySelector('.search').classList.toggle('move-srch');
-      }
-  }
+    name: "header",
+    components: {
+        Navbar
+    },
+    created() {
+        this.loadUser();
+    },
+    computed: {
+        user() {
+            return this.$store.getters.getUser;
+        }
+    },
+    methods: {
+        openNavbar() {
+            document.querySelector('.navbar').classList.toggle('close');
+        },
+        loadUser() {
+            this.$store.dispatch({type: 'loadUser'})
+                .then((user)=> {
+                    // console.log('user##', user)
+                })
+        }
+    }
 };
 </script>
 
@@ -51,12 +61,12 @@ export default {
 @import "../assets/scss/style.scss";
 
 .header-container {
-  border-bottom: 1px solid $border-color;
-  width: 100%;
-  height: 100px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+    border-bottom: 1px solid $border-color;
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
 .add-btn {
@@ -89,12 +99,9 @@ export default {
     margin-right: 15px;
     align-items: center;
 }
-.header-title {
-    justify-content: space-between;
-}
+
 .header-left {
-    transition: all 0.3s ease;
-    margin-left: 310px;
+    margin-left: 200px;
 }
 .header-img {
     align-items: center;
@@ -107,10 +114,8 @@ export default {
 .envelope, .bell {
     margin-right: 30px;
 }
-// .navbar {
-//     display: none;
-// }
 .close {
+    transition: all 0.3s ease;
     display: none;
 }
 
@@ -134,21 +139,19 @@ export default {
 }
 .nav-title {
     align-items: center;
-    // margin: 30px;
-    font-size: 34px;
-    position: fixed;
+    font-size: 22px;
+    position: absolute;
     left: 0;
     top: 0;
     text-transform: capitalize;
-    border: 1px solid black;
+    border: 1px solid #0e1a35;
     background-color: #0e1a35;
     color: white;
-    font-size: 34px;
     font-weight: 500;
     line-height: 48px;
-    width: 300px;
+    width: 180px;
     height: 107px;
-    padding: 0 30px;;
+    padding: 0 10px;
 }
 .icon {
     color: $main-color;
