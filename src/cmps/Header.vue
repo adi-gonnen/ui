@@ -1,12 +1,12 @@
 <template>
     <section class="header-container flex">
-        <navbar class="navbar close-mobile "/>
+        <navbar class="navbar"/>
         <div class="nav-title flex">
             <font-awesome-icon icon="dot-circle" class="icon icon-title"/>
             <p>merkury</p>
         </div>
         <div class="header-left flex">
-            <div class="nav-hamburger flex" @click="openNavbar">
+            <div class="nav-hamburger flex" @click="toggleNavbar">
                 <font-awesome-icon icon="caret-left" class="fa left"/>
                 <font-awesome-icon icon="bars" class="fa bars"/>
             </div>
@@ -46,7 +46,7 @@ export default {
         }
     },
     methods: {
-        openNavbar() {
+        toggleNavbar() {
             document.querySelector('.navbar').classList.toggle('close');
             document.querySelector('.navbar').classList.toggle('open-mobile');
         },
@@ -72,9 +72,7 @@ export default {
     padding: 10px;
     background-color: white;
 }
-.navbar, {
-    display: block;
-}
+
 .add-btn {
   border-radius: 30px;
   color: white;

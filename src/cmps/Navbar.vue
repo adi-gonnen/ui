@@ -48,9 +48,7 @@ export default {
     font-weight: 500;
     line-height: 48px;
     width: 180px;
-    // height: 100%;
     transition: all 0.3s ease;
-    // display: none;
 }
 .icon {
     color: $main-color;
@@ -75,9 +73,7 @@ export default {
     }
 }
 
-.close-mobile {
-    // display: block;
-}
+
 @media (max-width: 540px) {
     .nav-container {
         font-size: 18px;
