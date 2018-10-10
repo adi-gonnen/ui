@@ -151,7 +151,7 @@ export default {
     top: 0;
     text-transform: capitalize;
     border: 1px solid #0e1a35;
-    background-color: #0e1a35;
+    // background-color: #0e1a35;
     color: white;
     font-weight: 500;
     line-height: 48px;
