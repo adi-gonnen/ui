@@ -12,7 +12,7 @@ export default {
 
 <style>
 .smile {
-    margin: 50px 200px;
+    margin: 150px 200px;
     color: red;
 }
 .smile-icon {

@@ -69,7 +69,7 @@ export default {
     right: 0;
     border-bottom: 1px solid $border-color;
     width: 100%;
-    height: 100px;
+    height: 107px;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
