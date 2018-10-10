@@ -24,3 +24,11 @@
 .ml10 {     //margin-left 10px
     margin-left: 10px;
 }
+
+.close {
+    transition: all 0.3s ease;
+    display: none;
+}
+.open {
+    display: block;
+}

@@ -26,7 +26,6 @@ body {
   background-color: #d5dae654
 }
 
-// https://murmuring-sierra-54649.herokuapp.com
 </style>
 
 

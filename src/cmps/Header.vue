@@ -1,8 +1,8 @@
 <template>
     <section class="header-container flex">
-        <navbar class="navbar"/>
+        <navbar class="navbar close-mobile "/>
         <div class="nav-title flex">
-            <font-awesome-icon icon="dot-circle" class="icon"/>
+            <font-awesome-icon icon="dot-circle" class="icon icon-title"/>
             <p>merkury</p>
         </div>
         <div class="header-left flex">
@@ -48,6 +48,7 @@ export default {
     methods: {
         openNavbar() {
             document.querySelector('.navbar').classList.toggle('close');
+            document.querySelector('.navbar').classList.toggle('open-mobile');
         },
         loadUser() {
             this.$store.dispatch({type: 'loadUser'})
@@ -71,7 +72,9 @@ export default {
     padding: 10px;
     background-color: white;
 }
-
+.navbar, {
+    display: block;
+}
 .add-btn {
   border-radius: 30px;
   color: white;
@@ -120,10 +123,6 @@ export default {
 .envelope, .bell {
     margin-right: 30px;
 }
-.close {
-    transition: all 0.3s ease;
-    display: none;
-}
 
 .bell-container {
     position: relative
@@ -151,7 +150,7 @@ export default {
     top: 0;
     text-transform: capitalize;
     border: 1px solid #0e1a35;
-    // background-color: #0e1a35;
+    background-color: #0e1a35;
     color: white;
     font-weight: 500;
     line-height: 48px;
@@ -177,6 +176,47 @@ export default {
         width: 178px;
         font-size: 1em;
         margin-right: 30px;
+    }
+    .header-container {
+        background-color: #0e1a35;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 107px;
+        padding: 0 10px;
+    }
+    .nav-title {
+        height: 50px;
+        z-index: 5;
+        padding: 9px;
+        left: -7px;
+    }
+    .icon-title {
+        margin: 15px 5px;;
+    }
+    .header-left {
+        margin-left: 10px;
+        margin-top: 50px;
+        flex-direction: row;
+    }
+    .envelope, .bell {
+        margin-right: 10px;
+    }
+    .header-right {
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .bell-count {
+        right: 0;
+    }
+    .navbar {
+        display: none;
+    }
+    .open-mobile {
+        display: block;
     }
 }
 </style>

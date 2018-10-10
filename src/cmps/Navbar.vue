@@ -39,7 +39,7 @@ export default {
 .nav-container {
     position: absolute;
     left: 0;
-    top: 100px;
+    top: 107px;
     text-transform: capitalize;
     border: 1px solid black;
     background-color: #0e1a35;
@@ -48,8 +48,9 @@ export default {
     font-weight: 500;
     line-height: 48px;
     width: 180px;
-    height: 100%;
+    // height: 100%;
     transition: all 0.3s ease;
+    // display: none;
 }
 .icon {
     color: $main-color;
@@ -74,6 +75,9 @@ export default {
     }
 }
 
+.close-mobile {
+    // display: block;
+}
 @media (max-width: 540px) {
     .nav-container {
         font-size: 18px;

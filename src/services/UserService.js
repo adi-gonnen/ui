@@ -27,7 +27,7 @@ const activities = [
     },
     {
         from: 'Alexandra Spears',
-        img: 'img/Alexandra.png',
+        img: 'img/alexandra.png',
         title: 'added a new project',
         desc: 'Free PSD (...)',
         time: '3 hours ago'
