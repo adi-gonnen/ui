@@ -1,3 +1,3 @@
 module.exports = {
-    baseUrl: '/ui/'
+    baseUrl: '/ui/dist/'
 }
