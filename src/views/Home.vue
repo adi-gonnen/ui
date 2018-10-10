@@ -55,7 +55,7 @@ export default {
 
 .hello {
   text-align: left;
-  margin: 25px 20px;
+  margin: 120px 20px 25px 20px;
 }
 .upper-section,
 .lower-section {

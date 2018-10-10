@@ -64,6 +64,9 @@ export default {
 @import "../assets/scss/style.scss";
 
 .header-container {
+    position: fixed;
+    top: 0;
+    right: 0;
     border-bottom: 1px solid $border-color;
     width: 100%;
     height: 100px;
